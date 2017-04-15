@@ -16,7 +16,7 @@ class RSSreddit(object):
         response = requests.get(url, headers={'User-agent': 'RSSreddit'})
         print(response)
         data = ElementTree.fromstring(response.content)
-        print(self.recurse(data))
+        RSSreddit.tree = self.recurse(data)
 
         # return self.dati
 
@@ -38,16 +38,6 @@ class RSSreddit(object):
                 else:
                     dati[item] = [self.recurse(elem)]
         return dati
-        # self.block = {}
-        # for elem in element:
-        #     item = self.tag_name(elem)
-        #     # print(item)
-        #     if type(elem.text) is str:
-        #         self.block[item] = elem.text
-        #     elif elem.attrib:
-        #         if item in self.block:
-        #             temp, self.block[item] = self.block[item], []
-        #             self.block[item].append(temp)
 
 
     def __str__(self):
