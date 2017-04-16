@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .RSSreddit import RSSreddit
+from .rssreddit import subreddit, user
 
 __author__ = """Algogator"""
 __email__ = 'algogator@gmail.com'
