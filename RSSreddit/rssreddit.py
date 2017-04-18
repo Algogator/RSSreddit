@@ -14,4 +14,4 @@ class user(BaseRSS):
     URL = "http://www.reddit.com/user/"
 
     def __init__(self, rss):
-        BaseRSS.__init__(self, subreddit.URL+rss)
+        BaseRSS.__init__(self, user.URL+rss)
