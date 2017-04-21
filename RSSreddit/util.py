@@ -36,7 +36,10 @@ def recurseXML(element):
     data = {}
     for elem in element:
         item = tag_name(elem)
-        if type(elem.text) is str:
+        if elem.attrib and type(elem.text) is str:
+            data[item] = elem.attrib
+            data[item].update({item: elem.text})
+        elif type(elem.text) is str:
             data[item] = elem.text
         elif elem.attrib:
             if item in data:

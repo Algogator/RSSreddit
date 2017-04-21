@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
+"""Provide subreddit and user class."""
 from .base import BaseRSS
 
 class subreddit(BaseRSS):
 
-    URL = "http://www.reddit.com/r/"
+    """Generate a subreddit instance."""
 
-    def __init__(self, rss):
-        BaseRSS.__init__(self, subreddit.URL+rss)
+    def __init__(self, rss, category = ""):
+        BaseRSS.__init__(self, ("http://www.reddit.com/r/{0}/{1}").format(rss,category))
 
 
 class user(BaseRSS):
 
-    URL = "http://www.reddit.com/user/"
-
     def __init__(self, rss):
-        BaseRSS.__init__(self, user.URL+rss)
+        BaseRSS.__init__(self, ("http://www.reddit.com/user/{0}").format(rss))
