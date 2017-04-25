@@ -6,7 +6,7 @@ RSSreddit
 .. image:: https://img.shields.io/pypi/v/RSSreddit.svg
         :target: https://pypi.python.org/pypi/RSSreddit
 
-.. image:: https://img.shields.io/travis/algogator/RSSreddit.svg
+.. image:: https://travis-ci.org/Algogator/RSSreddit.svg
         :target: https://travis-ci.org/algogator/RSSreddit
 
 
