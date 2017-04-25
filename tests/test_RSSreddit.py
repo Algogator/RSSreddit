@@ -12,7 +12,7 @@ Tests for `RSSreddit` module.
 import sys
 import unittest
 
-from RSSreddit import RSSreddit
+import RSSreddit
 
 
 
