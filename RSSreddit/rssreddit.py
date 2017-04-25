@@ -8,22 +8,23 @@ class subreddit(BaseRSS):
     def __init__(self, rss):
         BaseRSS.__init__(self, ("http://www.reddit.com/r/{0}/").format(rss))
 
-    def hot(self):
+    def hot(self, sort):
         return self.make_request("hot")
 
-    def top(self, arg):
+    def top(self, sort):
         return self.make_request("top")
 
-    def controversial(self, arg):
+    def controversial(self, sort):
         return self.make_request("controversial")
 
-    def new(self, arg):
+    def new(self, sort):
         return self.make_request("new")
 
-    def gilded(self, arg):
-        return self.make_request("gilded")
 
 class user(BaseRSS):
 
     def __init__(self, rss):
         BaseRSS.__init__(self, ("http://www.reddit.com/user/{0}").format(rss))
+
+    def submitted(self):
+        return self.make_request("submitted")
