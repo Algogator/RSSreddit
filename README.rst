@@ -13,14 +13,16 @@ RSSreddit
 
 Reddits RSS in JSON
 
+Installation:
+-------------
 
-* Free software: MIT license
-* Documentation: https://RSSreddit.readthedocs.io.
+pip install RSSreddit
 
 
-Features
---------
+TODO
+----
 
 * Documentation
-* Sort functionality
-* Make items iterable
+* Test
+* Iterables
+* Sorting
